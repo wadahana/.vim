@@ -57,8 +57,8 @@ set laststatus=2      " 显示状态栏 (默认值为 1, 无法显示状态栏)
 " set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\ 
 
 " keymap 设置
-nnoremap <C-q> :echoe "Use a"<CR>
-imap <C-s> <Esc>:w<CR>
+"nnoremap <C-q> :echoe "Use a"<CR>
+"imap <C-s> <Esc>:w<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -72,7 +72,33 @@ map <F5> :!ctags -R --exclude=.git --exclude=.svn<CR>
 nmap <F1> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
-
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+        \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+        \ },
+            \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+        \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
 
 " NREDTree 配置
 nmap <F2> :NERDTree<CR>
@@ -88,3 +114,10 @@ let g:Powerline_symbols = 'unicode'
 " ctrlp 配置
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.png,*.jpg,*.jpeg,*.gif " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" vim-go 配置
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
