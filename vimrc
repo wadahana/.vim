@@ -107,6 +107,9 @@ let NERDTreeWinPos='left'
 let NERDTreeWinSize=30
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$', '\.a$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$' ]
 
+" NeoComplete 配置
+let g:neocomplete#enable_at_startup = 0
+
 " vim-Powerline 配置
 "let g:Powerline_symbols = 'fancy'
 let g:Powerline_symbols = 'unicode'
@@ -115,6 +118,7 @@ let g:Powerline_symbols = 'unicode'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.png,*.jpg,*.jpeg,*.gif " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+let g:AutoPairsCenterLine = 0
 " vim-go 配置
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
