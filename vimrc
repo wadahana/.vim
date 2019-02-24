@@ -31,6 +31,9 @@ syntax on
 " 显示行号 
 set number 
 
+" 禁止自动换行
+set nowrap
+
 " 配色方案
 colorscheme molokai     " 设置配色方案
 set t_Co=256            " 修改终端和 vim 为 256 色
@@ -58,11 +61,11 @@ set laststatus=2      " 显示状态栏 (默认值为 1, 无法显示状态栏)
 
 " keymap 设置
 "nnoremap <C-q> :echoe "Use a"<CR>
-"imap <C-s> <Esc>:w<CR>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+"noremap <C-s> <Esc>:w<CR>
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-l> <C-w>l
 
 " 设置 ctags
 " set tags="/usr/local/bin/ctags"
@@ -125,3 +128,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+set expandtab
+set smarttab
+
