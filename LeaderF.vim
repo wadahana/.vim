@@ -11,3 +11,9 @@ let g:Lf_CtagsFuncOpts={
     \ 'c': '--c-kinds=+px',
     \ 'c++': '--c++-kinds=+pxI',
 \ }
+let g:Lf_CommandMap = {                                                                                                                                                                                                                       
+    \ '<C-J>': ['<Down>'],
+    \ '<C-K>': ['<Up>'],
+    \ '<Up>': ['<C-k>'],
+    \ '<Down>': ['<C-j>'],
+\} 
