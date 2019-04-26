@@ -6,7 +6,7 @@
 
 
 " 设置 Leader键
-let mapleader="z"
+let mapleader="\<space>"
 
 " 定义快捷键保存当前窗口内容
 nmap <Leader>w :w<CR>
@@ -26,16 +26,21 @@ nmap F W
 
 "设置切换Buffer快捷键"
 " 下一个buffer
-nmap <C-n> :bn<CR>
-imap <C-n> <ESC>:bn<CR>
+nmap <Leader>n :bn<CR>
+"imap <C-n> <ESC>:bn<CR>
 " 上一个buffer
-nmap <C-p> :bp<CR>       
-imap <C-p> <ESC>:bp<CR>
-nmap <C-d> :bd<CR>
-imap <C-d> <ESC>:bd<CR>
+nmap <Leader>p :bp<CR>       
+"imap <C-p> <ESC>:bp<CR>
+nmap <Leader>d :bd<CR>
+"imap <C-d> <ESC>:bd<CR>
+nmap <Leader>1 :b1<CR>
+nmap <Leader>2 :b2<CR>
+nmap <Leader>3 :b3<CR>
+nmap <Leader>4 :b4<CR>
+nmap <Leader>5 :b5<CR>
 
 " LeaderF 映射
-nmap <C-lb> :LeaderfBuffer<CR>
-nmap <C-lm> :LeaderfMru<CR>
-nmap <C-lt> :LeaderfTag<CR>
-nmap <C-lf> :LeaderfFunction<CR>
+nmap <Leader>b :LeaderfBuffer<CR>
+nmap <Leader>m :LeaderfMru<CR>
+nmap <Leader>t :LeaderfTag<CR>
+nmap <Leader>f :LeaderfFunction<CR>
