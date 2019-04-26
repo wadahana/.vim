@@ -10,9 +10,9 @@ syntax on
 " 禁止自动换行
 set nowrap
 
-" 高亮显示当前行/列
-set cursorline
-set cursorcolumn
+" 高亮显示当前行/列 (导致vim滚动卡顿)
+"set cursorline
+"set cursorcolumn
 
 "设置不生成备份文件
 set nobackup
