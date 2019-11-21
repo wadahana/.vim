@@ -6,7 +6,15 @@
 
 
 " 设置 Leader键
-let mapleader="\<space>"
+let mapleader=";"
+
+" ==== 系统剪切板复制粘贴 ====
+" v 模式下复制内容到系统剪切板
+vmap <Leader>c "+yy
+" n 模式下复制一行到系统剪切板
+nmap <Leader>c "+yy
+" n 模式下粘贴系统剪切板的内容
+nmap <Leader>v "+p
 
 " 定义快捷键保存当前窗口内容
 nmap <Leader>w :w<CR>
@@ -25,14 +33,12 @@ nmap f w
 nmap F W
 
 "设置切换Buffer快捷键"
-" 下一个buffer
+:nn <Leader>0 :tablast<CR>
+" 下一个Buffer
 nmap <Leader>n :bn<CR>
-"imap <C-n> <ESC>:bn<CR>
-" 上一个buffer
+" 上一个Buffer
 nmap <Leader>p :bp<CR>       
-"imap <C-p> <ESC>:bp<CR>
 nmap <Leader>d :bd<CR>
-"imap <C-d> <ESC>:bd<CR>
 nmap <Leader>1 :b1<CR>
 nmap <Leader>2 :b2<CR>
 nmap <Leader>3 :b3<CR>
