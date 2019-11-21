@@ -16,4 +16,10 @@ Plug 'vim-airline/vim-airline-themes'
 " 自动ctags
 Plug 'ludovicchabant/vim-gutentags'
 
+" go 主要插件
+Plug 'fatih/vim-go', { 'tag': '*' }
+" go 中的代码追踪，输入 gd 就可以自动跳转
+Plug 'dgryski/vim-godef'
+
+
 call plug#end()

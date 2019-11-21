@@ -6,6 +6,8 @@ set number
 
 " 自动语法高亮
 syntax on
+" 启用自动补全
+filetype plugin indent on
 
 " 禁止自动换行
 set nowrap
@@ -55,4 +57,6 @@ source ~/.vim/NERDTree.vim
 source ~/.vim/airline.vim
 " LeaderF
 source ~/.vim/LeaderF.vim
+" vim-go
+source ~/.vim/vimgo.vim
 
