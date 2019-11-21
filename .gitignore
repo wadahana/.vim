@@ -1,3 +1,5 @@
 plugged/
+cache/
 *.swp
 *.swo
+.netrwhist
